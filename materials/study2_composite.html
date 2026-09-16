@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: white;
+    }
+    .figure-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .figure-container img.base {
+      width: 100%;
+      display: block;
+    }
+    .gif-overlay {
+      position: absolute;
+      height: auto; /* 保持4:3原始比例，不压缩画质 */
+    }
+
+    /* ── 微调区域：只需改这两块的 left / top / width ── */
+    #gif-positive {
+      left: 0.5%;
+      top: 76%;
+      width: 16.5%;
+    }
+    #gif-negative {
+      left: 17.2%;
+      top: 76%;
+      width: 16.5%;
+    }
+    /* ──────────────────────────────────────────────── */
+  </style>
+</head>
+<body>
+  <div class="figure-container">
+    <img class="base" src="study2.jpg" />
+    <img class="gif-overlay" id="gif-positive" src="sparse_positve_update.gif" />
+    <img class="gif-overlay" id="gif-negative" src="sparse_negative_update.gif" />
+  </div>
+</body>
+</html>
